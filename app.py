@@ -11,9 +11,6 @@ BUCKET = os.environ.get('BUCKET_NAME')
 def home():
     contents = list_files(BUCKET)
     return render_template('index.html', bucket_name=BUCKET)
-def list():
-    contents = show_image(BUCKET)
-    return render_template('collection.html', contents=contents)
 
 @app.route("/pics")
 def list():
